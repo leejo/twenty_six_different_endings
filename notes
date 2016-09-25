@@ -1,0 +1,8 @@
+1) Geo::IP2Location::Lite
+
+	* built in OO
+	* type constraints remove the boilerplate for validating IPs
+	* pack/unpack experimental -> NativeCall
+	* tests (skip, etc)
+	* uploading to the ecosystem
+	* getting a commitbit
