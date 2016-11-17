@@ -103,6 +103,8 @@ my $ipnum = :256[$ipaddr.comb(/\d+/)];
 
 ---
 
+### NativeCall
+
 ```nohighlight
 sub read8 {
     my ($obj, $handle, $position) = @_;
@@ -112,6 +114,8 @@ sub read8 {
     return unpack("C", $data);
 }
 ```
+
+A replacement for unpack (still experimental with perl6)
 
 ```nohighlight
 use NativeCall;
@@ -149,6 +153,22 @@ Result: PASS
 
 ---
 
+### Example
+
+```
+> perl6 \
+	-Ilib \
+	-MGeo::IP2Location::Lite \
+	-e'my $l = Geo::IP2Location::Lite.new(
+		file => "IP-COUNTRY-REGION-CITY.BIN.201607"
+	);
+	say $l.get_country_long( "85.3.40.48" );'
+
+Switzerland
+```
+
+---
+
 ### Available Now!
 
 `panda install Geo::IP2Location::Lite`
@@ -161,7 +181,26 @@ Result: PASS
 
 ---
 
+![LEEJO Modules](img/leejo_modules.png)
+
+---
+
 ![26 Different Endings](img/26DiffEnds_cover_1inchborder.jpg)
+
+---
+
+![26 Different Endings](img/26DiffEnds_55.jpg)
+
+---
+
+![26 Different Endings](img/26DiffEnds_21.jpg)
+
+---
+
+![26 Different Endings](img/26DiffEnds_25.jpg)
+
+---
+![NQL](img/a-z_coverage.jpg)
 
 ---
 
